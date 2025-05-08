@@ -1,0 +1,109 @@
+.first-div {
+  background: #191d20;
+  height: 100vh;
+}
+
+.second-div {
+  background: #191d20;
+  padding: 20px 0px;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+}
+.product-carousel{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.container-link {
+  text-align: center;
+  grid-column: 1/-1;
+  margin-top: 20px;
+}
+
+.container-link a {
+  color: #f4eee0;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.container-link a:hover {
+  color: #baa48f;
+}
+
+.third-div {
+  background: #121415;
+  height: 60vh;
+  padding: 20px 0px;
+}
+.info-carousel {
+  display: flex;
+  justify-content: space-around;
+}
+
+.link-div {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem 0;
+  justify-content: center;
+}
+
+.info-container {
+  background-color: #191d20;
+  display: flex;
+  justify-content: space-between; /* Ensure equal space for image and text */
+  align-items: center; /* Ensure both sections fill the height */
+  margin: 0 20px;
+  height: calc(60vh - 20px); /* Take the rest of the space and keep 20px from the bottom */
+}
+
+.info-picture-container {
+  flex: 1;
+  height: 100%;
+}
+
+.info-text-container {
+  flex: 1;
+  padding: 1rem;
+}
+
+
+.info-picture-container img {
+  width: 100%; /* Ensure the image fills the container */
+  height: 100%; /* Maintain aspect ratio */
+  object-fit: fill;
+}
+
+.info-text-title {
+  color: #e6b54c;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.info-text {
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .info-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .picture-container img {
+    max-width: 100%;
+  }
+}
+
+.third-div{
+  height: auto;
+}
+
+.fourth-div {
+  background: #191d20;
+  height: 50vh;
+}

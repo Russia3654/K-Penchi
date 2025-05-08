@@ -1,0 +1,26 @@
+
+
+th div{
+  display: flex
+}
+
+.color-container{
+  margin-right: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.btn-div{
+  display: flex;
+  margin: 5px 0px;
+  justify-content: flex-end;
+}
+
+.text-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text-div div{
+  margin: 5px 0;;
+}

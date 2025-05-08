@@ -1,0 +1,35 @@
+.input {
+  width: 150px;
+  height: 40px; /* Increased height */
+  padding: 10px 15px; /* Adjusted padding */
+  margin: 5px 0;
+  border: 1px solid silver;
+  border-radius: 5px; /* Added border radius */
+  background-color: #f9f9f9; /* Changed background color */
+  transition: border-color 0.3s; /* Added transition for border color */
+}
+
+.input:focus {
+  border-color: goldenrod; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.input[type="file"] {
+  display: none;
+}
+
+/* Style for the custom file input button */
+.fileInputLabel{
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: 2px solid silver;
+  border-radius: 5px;
+  background-color: #171a1d;
+  transition: background-color 0.3s;
+}
+
+.fileInputLabel:hover {
+  background-color: #191d20; /* Change background on hover */
+  border-color: rgba(230, 181, 76, 0.5);
+}

@@ -1,0 +1,51 @@
+.myModal,
+.myPictureModal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.myCartContent,
+.mySearchContent {
+  height: 100%;
+  padding: 25px;
+  background: #121415;
+  border-radius: 16px;
+  min-width: 25%;
+}
+
+.myPictureContent {
+  padding: 25px;
+  background: #121415;
+  border-radius: 16px;
+  min-width: 25%;
+  z-index: 100;
+}
+
+.myModal.active {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.myPictureModal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .myCartContent,
+  .mySearchContent {
+    width: 100%;
+  }
+  .myPictureContent{
+    margin-top: 160px;
+    height: calc(100%);
+    width: 100%;
+  }
+}

@@ -1,0 +1,14 @@
+.picture-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.picture-item {
+    cursor: pointer;
+    margin: 5px;
+}
+
+.selected {
+    border: 2px solid green;
+}
+

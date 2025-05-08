@@ -1,0 +1,100 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  padding: 1rem;
+}
+
+.logo img{
+  height: 30px;
+}
+
+.closeBtn{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.nav_links .nav_links_container{
+  display: flex;
+  align-items: center;
+}
+
+.nav_links a{
+  color: #f4eee0;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.nav_links a:hover{
+  color: #baa48f;
+}
+.nav_btns a:hover{
+  background-color: #baa48f;
+}
+
+.navbar.scrolled {
+  background-color: #121415;
+  padding: 10px;
+}
+
+.nav_btns a{
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.burger {
+  display: none; /* Hide burger icon by default */
+  font-size: 24px; /* Adjust size as needed */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .logo img{
+    height: 15px;
+  }
+  .nav_links {
+    flex-direction: column; /* Stack links vertically */
+    position: absolute; /* Position dropdown */
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    right: 0;
+    background-color: #121415; /* Background color for dropdown */
+    z-index: 1000; /* Ensure dropdown is above other content */
+    transform: translateX(-100%);
+    transition: transform 0.8s ease-in-out;
+  }
+  .nav_links_container{
+    flex-direction: column;
+  }
+
+  .nav_links.open {
+    display: flex; /* Show links when menu is open */
+    transform: translateX(0); /* Move into view */
+  }
+
+  .burger {
+    display: block; /* Show burger icon on smaller screens */
+  }
+}

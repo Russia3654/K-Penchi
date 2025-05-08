@@ -1,0 +1,10 @@
+.underline {
+    background-color: goldenrod; /* Change background color */
+    width: 0; /* Start with width 0 */
+    height: 2px;
+    transition: width 0.5s ease; /* Smooth transition for width */
+}
+
+.animatedLink:hover .underline {
+    width: 100%; /* Grow to full width on hover */
+}

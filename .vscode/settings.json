@@ -1,0 +1,17 @@
+{
+  "git.ignoreLimitWarning": true,
+  "cSpell.words": [
+    "IMAGEKIT"
+  ],
+  "workbench.colorCustomizations": {
+    
+    "[Night Hacker]": 
+    {
+      "tab.activeBackground": "#12071c",
+      "activityBar.background": "#12071c",
+      "sideBar.background": "#12071c",
+      "editor.background":"#12071c44",
+      "terminal.foreground": "#00ff00",
+    }
+  }
+}

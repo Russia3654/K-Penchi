@@ -1,0 +1,11 @@
+.tagBody{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  background-color: #121415;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.tagText{
+  padding: 5px 10px;
+}

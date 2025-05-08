@@ -1,0 +1,38 @@
+.coming-soon {
+  position: relative; /* Position relative for absolute positioning of text */
+  display: flex;
+  text-align: center;
+  padding: 20px;
+  height: calc(50vh - 40px);
+  overflow: hidden; /* Hide overflow */
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.coming-soon img {
+  position: absolute; /* Position the image absolutely */
+  top: 0;
+  left: 0;
+  width: 100%; /* Fill the width */
+  height: 100%; /* Fill the height */
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
+  z-index: 1; /* Ensure the image is behind the text */
+}
+
+.coming-soon h2, .coming-soon p {
+  position: relative; /* Position relative to be in front of the image */
+  z-index: 2; /* Ensure text is above the image */
+  color: #fff; /* Text color for visibility */
+}
+
+
+.coming-soon h2 {
+  font-size: 24px;
+  color: #fff; /* Changed text color for better visibility */
+}
+
+.coming-soon p {
+  font-size: 16px;
+  color: #fff; /* Changed text color for better visibility */
+}
