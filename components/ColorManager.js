@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Loader from './ui/Loader/Loader';
 import ColorList from './ColorList';
-import { addTexture, deleteTexture, getTextures, updateTexture } from '../api/textures';
+import { addTexture, deleteTexture, getTextures, updateTexture } from '../pages/api/pictures/textures';
 import Modal from './ui/Modals/Modal';
 import ColorForm from './ColorForm';
 import Picture from './Picture';

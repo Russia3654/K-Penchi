@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Tag from "./ui/Tag/Tag";
 import Input from "./ui/Input/Input";
-import { getPictures } from '../api/pictures';
+import { getPictures } from '../pages/api/pictures/pictures';
 import Button from './ui/Button/Button';
 
 const ProductForm = ({ product, setProduct, onAdd, onEdit, isEditing, setIsSelecting, resetForm }) => {

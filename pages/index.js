@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import ImageCarousel from '../components/ImageCarousel';
-import ProductDetail from '../components/ProductDetail';
-import { getProducts } from '../api/products';
-import { getPictures } from '../api/pictures';
+import { getProducts } from '../pages/api/product/products';
+import { getPictures } from '../pages/api/pictures/pictures';
+import { getTextures } from '../pages/api/pictures/textures';
 import Link from 'next/link';
 import Loader from '../components/ui/Loader/Loader';
-import Info from '../components/Info';
 import ComingSoon from '../components/ComingSoon';
 import ProductCarousel from '../components/Carousel';
-import { getTextures } from '../api/textures';
+
 
 const Index = () => {
   const [products, setProducts] = useState([]);

@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-
 import { useRouter } from "next/router";
-import Modal from "./ui/Modals/Modal";
-import ProductView from "./ProductView";
 
 const SearchContainer = ({ product, onClose }) => {
   const router = useRouter();

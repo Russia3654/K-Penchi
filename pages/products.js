@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { getProductById, getProducts, getProductsCount } from "../api/products"; // Import the API functions
-
+import { getProductById, getProducts, getProductsCount } from "../pages/api/product/products"; // Import the API functions
+import { getTextures } from "../pages/api/pictures/textures";
 import ProductDetail from "../components/ProductDetail";
 import SortingComponent from "../components/SortingComponent"; // Import the SortingComponent
 import Select from "../components/ui/Select/Select";
@@ -8,7 +8,7 @@ import { useSortedProducts } from "../hooks/useProducts";
 import ProductView from "../components/ProductView";
 import Modal from "../components/ui/Modals/Modal";
 import { useRouter } from "next/router";
-import { getTextures } from "../api/textures";
+
 
 const ProductsPage = () => {
   const [filter, setFilter] = useState({
@@ -147,7 +147,7 @@ const ProductsPage = () => {
           </div>
           <div className="productSection">
             {filteredProducts.map((product) => (
-              <ProductDetail key={product.id} product={product} texture={texture}/>
+              <ProductDetail key={product.id} product={product} texture={texture} />
             ))}
             {productSelectModalVisible && (
               <Modal

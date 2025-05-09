@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Input from './ui/Input/Input';
-import { uploadTexturePicture } from '../api/pictures';
+import { uploadTexturePicture } from '../pages/api/pictures/pictures';
 
 const TextureManagement = () => {
   const [loading, setLoading] = useState(false);

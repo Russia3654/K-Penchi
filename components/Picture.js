@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { deletePictureFromProduct } from '../api/products';
+import { deletePictureFromProduct } from '../pages/api/product/products';
 import Loader from './ui/Loader/Loader';
 
 const Picture = ({ pictures, setVisible, productId, setPicture, cloudLoader, deletePicture, modes }) => {

@@ -4,10 +4,10 @@ import {
   addProduct,
   updateProduct,
   deleteProduct,
-} from "../api/products"; // Import API functions
-import ProductList from "./ProductList"; // Import the ProductList component
-import Picture from "./Picture"; // Import the PictureModal
-import Loader from "./ui/Loader/Loader"; // Import the Loader component
+} from "../pages/api/product/products";
+import ProductList from "./ProductList";
+import Picture from "./Picture";
+import Loader from "./ui/Loader/Loader";
 import Modal from "./ui/Modals/Modal";
 import ProductForm from "./ProductForm";
 import Button from "./ui/Button/Button";
@@ -19,20 +19,20 @@ const ProductManagement = () => {
   const [profit, setProfit] = useState("");
   const [productDescription, setProductDescription] = useState("");
   const [combination, setCombination] = useState([]);
-  const [productPictures, setProductPictures] = useState([]); // Array for multiple pictures
-  const [currentPictures, setCurrentPictures] = useState([]); // State for current pictures in preview
+  const [productPictures, setProductPictures] = useState([]); 
+  const [currentPictures, setCurrentPictures] = useState([]);
   const [productId, setProductId] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const [isSelecting, setIsSelecting] = useState(false);
   const [modal, setModal] = useState(false);
   const [productModal, setProductModal] = useState(false);
-  const [loading, setLoading] = useState(false); // State for loading
+  const [loading, setLoading] = useState(false); 
 
   const loadProducts = async () => {
-    setLoading(true); // Set loading to true
+    setLoading(true);
     const productList = await getProducts();
     setProducts(productList);
-    setLoading(false); // Set loading to false
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const ProductManagement = () => {
 
   const handleAddProduct = async (e) => {
     e.preventDefault();
-    setLoading(true); // Set loading to true
+    setLoading(true);
     try {
       await addProduct({
         name: productName,
@@ -50,20 +50,20 @@ const ProductManagement = () => {
         profit: parseFloat(profit),
         description: productDescription,
         combination: combination,
-        pictures: productPictures, // Include uploaded picture paths
+        pictures: productPictures,
       });
       resetForm();
-      loadProducts(); // Refresh product list
+      loadProducts();
     } catch (error) {
       console.error("Error adding product: ", error);
     } finally {
-      setLoading(false); // Set loading to false
+      setLoading(false);
     }
   };
 
   const handleUpdateProduct = async (e) => {
     e.preventDefault();
-    setLoading(true); // Set loading to true
+    setLoading(true);
     try {
       await updateProduct(productId, {
         name: productName,
@@ -72,27 +72,27 @@ const ProductManagement = () => {
         profit: parseFloat(profit),
         description: productDescription,
         combination: combination,
-        pictures: productPictures, // Include uploaded picture paths
+        pictures: productPictures,
       });
       resetForm();
-      loadProducts(); // Refresh product list
+      loadProducts();
     } catch (error) {
       console.error("Error updating product: ", error);
     } finally {
-      setLoading(false); // Set loading to false
+      setLoading(false);
     }
   };
 
   const handleDeleteProduct = async (id) => {
-    setLoading(true); // Set loading to true
+    setLoading(true);
     try {
       await deleteProduct(id);
       resetForm();
-      loadProducts(); // Refresh product list
+      loadProducts();
     } catch (error) {
       console.error("Error deleting product: ", error);
     } finally {
-      setLoading(false); // Set loading to false
+      setLoading(false);
     }
   };
 
@@ -102,7 +102,7 @@ const ProductManagement = () => {
     setProfit("");
     setProductDescription("");
     setCombination([]);
-    setProductPictures([]); // Reset pictures
+    setProductPictures([]);
     setProductId("");
     setIsEditing(false);
     setProductModal(false);

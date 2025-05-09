@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Input from './ui/Input/Input';
-import { getTexturePicture } from '../api/pictures';
+import { getTexturePicture } from '../pages/api/pictures/pictures';
 
 const ColorForm = ({color, setColor, onAdd, onEdit, isEditing, setIsSelecting, resetForm}) => {
     const [loadTextures, setLoadTextures] = useState([]); // New state for product pictures

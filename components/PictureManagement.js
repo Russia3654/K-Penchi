@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { uploadPicture, getPictures, deletePicture } from '../api/pictures';
+import { uploadPicture, getPictures, deletePicture } from '../pages/api/pictures/pictures';
 import Picture from './Picture';
 import Modal from './ui/Modals/Modal';
 import Loader from './ui/Loader/Loader';

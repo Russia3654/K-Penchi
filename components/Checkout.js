@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { checkCustomerExists, createCustomer } from '../api/customers'; // Import customer API functions
-
-import CustomerInfoForm from './CustomerInfoForm'; // Import the new CustomerInfoForm component
-
-import { useSelector } from 'react-redux'; // Import useSelector to access cart items
-
+import { checkCustomerExists, createCustomer } from '../pages/api/customer/customers';
+import CustomerInfoForm from './CustomerInfoForm';
+import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 import OrderSummary from './OrderSummary';
-import { createInvoice } from '../api/invoices';
-
+import { createInvoice } from '../pages/api/finance/invoices';
 
 const Checkout = () => {
-  const cartItems = useSelector(state => state.cart); // Retrieve cart items from Redux store
+  const cartItems = useSelector(state => state.cart);
   const shippingCost = 5.00;
   const subtotal = cartItems.reduce((sum, item) => sum + (item.finalPrice * item.quantity), 0);
   const total = subtotal + shippingCost;
