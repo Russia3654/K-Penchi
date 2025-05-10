@@ -18,7 +18,7 @@ const ColorManager = () => {
   const [isSelecting, setIsSelecting] = useState(false);
   const [modal, setModal] = useState(false);
   const [colorModal, setColorModal] = useState(false);
-  const [loading, setLoading] = useState(false); // State for loading
+  const [loading, setLoading] = useState(false);
 
   const loadColors = async () => {
     setLoading(true);
@@ -43,7 +43,7 @@ const ColorManager = () => {
       resetForm();
       loadColors();
     } catch (error) {
-      console.error("Error adding product: ", error);
+      console.error("Error adding color: ", error);
     } finally {
       setLoading(false);
     }
@@ -60,9 +60,9 @@ const ColorManager = () => {
       resetForm();
       loadColors();
     } catch (error) {
-      console.error("Error updating product: ", error);
+      console.error("Error updating color: ", error);
     } finally {
-      setLoading(false); // Set loading to false
+      setLoading(false);
     }
   }
 

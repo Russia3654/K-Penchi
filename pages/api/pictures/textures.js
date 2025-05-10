@@ -1,5 +1,5 @@
 import { db } from '../../../store/firebase';
-import { collection, getDocs, addDoc, doc, getDoc, updateDoc, deleteDoc }  from 'firebase/firestore';
+import { collection, getDocs, addDoc, doc, updateDoc, deleteDoc }  from 'firebase/firestore';
 
 export const getTextures = async () => {
   const texturesCollection = collection(db, 'textures');
